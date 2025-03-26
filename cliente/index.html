@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crud</title>
+  <link rel="stylesheet" href="app/css/style.css">
+</head>
+<body>
+  <main>
+    <section class="container grid">
+      <header class="header">
+        <h1 class="title">
+          CRUD
+        </h1>
+      </header>
+      <div class="formulario">
+        <h2 class="title">Datos basicos</h2>
+        <form id="form" class="form__container" novalidate>
+          <div class="form-group">
+            <label for="nombre" class="form__label">Nombre</label>
+            <input type="text" name="nombre" id="nombre" class="form__input" data-required="true">
+          </div>
+          <div class="form-group">
+            <label for="apellidos" class="form__label">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" class="form__input" data-required="true">
+          </div>
+          <div class="form-group">
+            <label for="telefono" class="form__label">Teléfono</label>
+            <input type="text" name="telefono" id="telefono" class="form__input" data-required="true">
+          </div>
+          <div class="form-group">
+            <label for="correo" class="form__label">Correo</label>
+            <input type="email" name="correo" id="correo" class="form__input" data-required="true">
+          </div>
+          <div class="form-group">
+            <label for="tipo_documento" class="form__label">Tipo de documento</label>
+            <select name="tipo_documento" id="tipo_documento" class="form__input" data-required="true">
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="documento" class="form__label">Documento</label>
+            <input type="text" name="documento" id="documento" class="form__input" data-required="true">
+          </div>
+          <div class="form-group">
+            <div class="form__checkbox" id="generos">
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn">Validar datos</button>
+          </div>
+        </form>
+      </div>
+      <div class="tabla">
+        <h2 class="title">Listado de usuarios</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Teléfono</th>
+              <th>Correo</th>
+              <th>Documento</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Nombre</td>
+              <td>Apellidos</td>
+              <td>Teléfono</td>
+              <td>Correo</td>
+              <td>Documento</td>
+              <td>
+                <div class="botonera">
+                  <button class="btn btn--samall">Editar</button>
+                  <button class="btn btn--samall btn--danger">Eliminar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="app/js/app.js" type="module"></script>
+</body>
+</html>

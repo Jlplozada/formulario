@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #39A900;
+  --primary-color-rbga: rgba(57, 169, 0, 0.7);
+  --secondary-color: #007832;
+  --tertiary-color: #f1f1f1;
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--tertiary-color);
+}
+
+/*
+*******************************
+* Layout
+*******************************
+*/
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: minmax(80px, 1fr);
+  grid-template-columns: 450px 1fr;
+  grid-template-areas:
+    "header header"
+    "formulario tabla";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+  grid-area: formulario;
+  position: sticky;
+  top: 70px;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  height: min-content
+}
+
+.tabla {
+  grid-area: tabla;
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  height: min-content
+}
+
+/**
+*******************************
+* Componenets
+*******************************
+*/
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form__label {
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+  outline: none;
+  transition: border 0.5s;
+}
+
+.form__input--error {
+  border: solid 1px red;
+}
+
+.form__input+span {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.form__input:hover {
+  border: solid 1px var(--secondary-color);
+  transition: border 0.5s;
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.1rem;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  text-decoration: none;
+  border-radius: 5px;
+  border: solid 1px var(--primary-color);
+  text-align: center;
+  font-weight: 600;
+  transition: color 0.5s;
+  transition: background-color 1s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  border: solid 1px var(--secondary-color);
+  transition: color 0.5s;
+  transition: background-color 0.8s;
+}
+
+.btn--danger {
+  background-color: #d43030;
+  border: solid 1px #d43030;
+}
+
+.btn--samall {
+  font-weight: 300;
+  width: auto;
+  padding: 8px 10px;
+}
+
+.botonera {
+  display: flex;
+  gap: 1rem;
+}
+
+table {
+  background-color: var(--white-color);
+  text-align: left;
+  border-collapse: collapse;
+  border: solid 1px var(--primary-color);
+  width: 100%;
+}
+
+th, td {
+  padding: 20px;
+}
+
+thead {
+  background-color: var(--primary-color);
+  border-bottom: solid 1px var(--black-color);
+  color: var(--white-color);
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+tr:hover td {
+  background-color: var(--tertiary-color);
+}

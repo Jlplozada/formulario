@@ -1,0 +1,1 @@
+export { listarDocumentos } from "./listar_documentos.js";
