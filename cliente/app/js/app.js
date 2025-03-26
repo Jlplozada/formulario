@@ -71,39 +71,42 @@ const cargar_pagina = async () => {
 
  }
 
- const cargar_tabla= async ()=>{
-  const usuario = await listar_usuarios();
+  const cargar_tabla = async () => {
+  const usuarios = await listar_usuarios();
 
-  const tabla_cuerpo= tabla.querySelector("tbody");
-  const fila =document.createElement("tr");
-  const tdNombre=document.createElement("tb");
-  const tdApellido=document.createElement("tb");
-  const tdTelefono=document.createElement("tb");
-  const tdCorreo=document.createElement("tb");
-  const tdDocumento=document.createElement("tb");
-  const tbBotonera=document.createElement("tb");
-  const botonera=document.createElement("div");
-  const btnEditar=document.createElement("button");
-  const btnEliminar=document.createElement("button");
+  const tabla_cuerpo = tabla.querySelector("tbody");
 
-  tdNombre.textContent=usuario.nombre;
-  tdApellido.textContent=usuario.apellidos;
-  tdTelefono.textContent=usuario.telefono;
-  tdCorreo.textContent=usuario.correo;
-  tdDocumento.textContent=usuario.documento;
+  usuarios.forEach((usuario) => {
+    const fila = document.createElement("tr");
+    const tdNombre = document.createElement("td");
+    const tdApellido = document.createElement("td");
+    const tdTelefono = document.createElement("td");
+    const tdCorreo = document.createElement("td");
+    const tdDocumento = document.createElement("td");
+    const tbBotonera = document.createElement("td");
+    const botonera = document.createElement("div");
+    const btnEditar = document.createElement("button");
+    const btnEliminar = document.createElement("button");
 
-  botonEditar.textContent = "Editar";
-  botonEliminar.textContent = "Eliminar";
-  
-  div.classList.add("botonera");
-  botonEditar.classList.add("btn", "btn--samall");
-  botonEliminar.classList.add("btn", "btn--samall", "btn--danger");
+    tdNombre.textContent = usuario.nombre;
+    tdApellido.textContent = usuario.apellidos;
+    tdTelefono.textContent = usuario.telefono;
+    tdCorreo.textContent = usuario.correo;
+    tdDocumento.textContent = usuario.documento;
 
-  div.append(botonEditar, botonEliminar);
-  acciones.append(div);
+    btnEditar.textContent = "Editar";
+    btnEliminar.textContent = "Eliminar";
 
-  fila.append(celdaNombre, celdaApellidos, celdaTelefono, celdaCorreo, celdaDocumento, acciones);
-  tbody.append(fila);
+    botonera.classList.add("botonera");
+    btnEditar.classList.add("btn", "btn--small");
+    btnEliminar.classList.add("btn", "btn--small", "btn--danger");
+
+    botonera.append(btnEditar, btnEliminar);
+    tbBotonera.append(botonera);
+
+    fila.append(tdNombre, tdApellido, tdTelefono, tdCorreo, tdDocumento, tbBotonera);
+    tabla_cuerpo.append(fila);
+  });
  }
 
 // Función asincrona para poder manipular las peticiones y guardar los datos del formulario
