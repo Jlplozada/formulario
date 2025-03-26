@@ -7,7 +7,7 @@
 // Importaciones para las ayudas
 import { listarDocumentos } from "../casos_de_uso/documentos/index.js";
 import { listarGeneros } from "../casos_de_uso/generos/index.js";
-import { guardar_usuario } from "../casos_de_uso/usuarios/index.js";
+import { guardar_usuario,listar_usuarios } from "../casos_de_uso/usuarios/index.js";
 import {
   tiene_valores,
   validar_campos,
@@ -30,6 +30,7 @@ const email = document.querySelector("#correo");
 const tipoDocumento = document.querySelector("#tipo_documento");
 const documento = document.querySelector('#documento');
 const generos = document.querySelector('#generos');
+const tabla =document.querySelector('#tabla')
 
 /**
  * ****************************************
@@ -70,6 +71,41 @@ const cargar_pagina = async () => {
 
  }
 
+ const cargar_tabla= async ()=>{
+  const usuario = await listar_usuarios();
+
+  const tabla_cuerpo= tabla.querySelector("tbody");
+  const fila =document.createElement("tr");
+  const tdNombre=document.createElement("tb");
+  const tdApellido=document.createElement("tb");
+  const tdTelefono=document.createElement("tb");
+  const tdCorreo=document.createElement("tb");
+  const tdDocumento=document.createElement("tb");
+  const tbBotonera=document.createElement("tb");
+  const botonera=document.createElement("div");
+  const btnEditar=document.createElement("button");
+  const btnEliminar=document.createElement("button");
+
+  tdNombre.textContent=usuario.nombre;
+  tdApellido.textContent=usuario.apellidos;
+  tdTelefono.textContent=usuario.telefono;
+  tdCorreo.textContent=usuario.correo;
+  tdDocumento.textContent=usuario.documento;
+
+  botonEditar.textContent = "Editar";
+  botonEliminar.textContent = "Eliminar";
+  
+  div.classList.add("botonera");
+  botonEditar.classList.add("btn", "btn--samall");
+  botonEliminar.classList.add("btn", "btn--samall", "btn--danger");
+
+  div.append(botonEditar, botonEliminar);
+  acciones.append(div);
+
+  fila.append(celdaNombre, celdaApellidos, celdaTelefono, celdaCorreo, celdaDocumento, acciones);
+  tbody.append(fila);
+ }
+
 // Función asincrona para poder manipular las peticiones y guardar los datos del formulario
 const guardar = async (e) => {
   // Detenemos el comportamiento por defecto del formulario
@@ -101,6 +137,10 @@ const guardar = async (e) => {
 // Evento que se ejecuta cuando el documento se ha cargado
 document.addEventListener("DOMContentLoaded", () => {
   cargar_pagina();
+  cargar_tabla();
+
+
+
 });
 
 nombre.addEventListener("keydown", son_letras);
